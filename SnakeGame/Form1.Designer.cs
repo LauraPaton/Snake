@@ -36,17 +36,18 @@
             // 
             // lblHead
             // 
-            this.lblHead.BackColor = System.Drawing.Color.Lime;
+            this.lblHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
             this.lblHead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHead.Location = new System.Drawing.Point(540, 540);
+            this.lblHead.Location = new System.Drawing.Point(394, 274);
             this.lblHead.Name = "lblHead";
             this.lblHead.Size = new System.Drawing.Size(15, 15);
             this.lblHead.TabIndex = 0;
             // 
             // lblPixel
             // 
-            this.lblPixel.BackColor = System.Drawing.Color.White;
+            this.lblPixel.BackColor = System.Drawing.Color.Crimson;
             this.lblPixel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPixel.ForeColor = System.Drawing.Color.Crimson;
             this.lblPixel.Location = new System.Drawing.Point(146, 59);
             this.lblPixel.Name = "lblPixel";
             this.lblPixel.Size = new System.Drawing.Size(15, 15);
@@ -60,13 +61,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1145, 625);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.ClientSize = new System.Drawing.Size(564, 433);
             this.Controls.Add(this.lblPixel);
             this.Controls.Add(this.lblHead);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Opacity = 0.95D;
+            this.Text = "Snake";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
