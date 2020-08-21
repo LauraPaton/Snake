@@ -66,9 +66,11 @@
             this.Controls.Add(this.lblPixel);
             this.Controls.Add(this.lblHead);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form1";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snake";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
