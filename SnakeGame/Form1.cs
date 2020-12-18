@@ -95,17 +95,17 @@ namespace SnakeGame
 
             if (lblHead.Top < 0)
             {
-                moveBody(new Point(lblHead.Location.X, this.Height - lblHead.Height));
+                moveBody(new Point(lblHead.Location.X, this.Height - (lblHead.Height+35)));
             }
-            if (lblHead.Location.Y + lblHead.Height > this.Height)
+            if (lblHead.Location.Y + (lblHead.Height+35) > this.Height)
             {
                 moveBody(new Point(lblHead.Location.X, 0));
             }
             if (lblHead.Left <= 0)
             {
-                moveBody(new Point(this.Width - lblHead.Width, lblHead.Location.Y));
+                moveBody(new Point(this.Width - (lblHead.Width+15), lblHead.Location.Y));
             }
-            if (lblHead.Location.X + lblHead.Width > this.Width)
+            if (lblHead.Location.X + (lblHead.Width+15) > this.Width)
             {
                 moveBody(new Point(0, lblHead.Location.Y));
             }
@@ -114,8 +114,8 @@ namespace SnakeGame
         private void random_pixel()
         {
             Random rnd = new Random();
-            int x = rnd.Next(0, this.Width-lblPixel.Width);
-            int y = rnd.Next(0, this.Height-lblPixel.Height);
+            int x = rnd.Next(0, this.Width - (lblPixel.Width + 15));
+            int y = rnd.Next(0, this.Height - (lblPixel.Height + 35));
             lblPixel.Location = new Point(x, y);
         }
 

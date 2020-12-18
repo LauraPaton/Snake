@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblHead = new System.Windows.Forms.Label();
             this.lblPixel = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
@@ -36,22 +37,18 @@
             // 
             // lblHead
             // 
+            resources.ApplyResources(this.lblHead, "lblHead");
             this.lblHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
             this.lblHead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHead.Location = new System.Drawing.Point(394, 274);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(15, 15);
-            this.lblHead.TabIndex = 0;
             // 
             // lblPixel
             // 
+            resources.ApplyResources(this.lblPixel, "lblPixel");
             this.lblPixel.BackColor = System.Drawing.Color.Crimson;
             this.lblPixel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPixel.ForeColor = System.Drawing.Color.Crimson;
-            this.lblPixel.Location = new System.Drawing.Point(146, 59);
             this.lblPixel.Name = "lblPixel";
-            this.lblPixel.Size = new System.Drawing.Size(15, 15);
-            this.lblPixel.TabIndex = 1;
             // 
             // Timer
             // 
@@ -59,19 +56,20 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.ClientSize = new System.Drawing.Size(564, 433);
             this.Controls.Add(this.lblPixel);
             this.Controls.Add(this.lblHead);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.98D;
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Snake";
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
